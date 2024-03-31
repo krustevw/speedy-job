@@ -1,21 +1,21 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
--- Eventos
+-- Events
 
 RegisterNetEvent('mt-delivery:client:PedirEntrega', function()
     TriggerEvent('animations:client:EmoteCommandStart', {"argue"})
-    QBCore.Functions.Progressbar('falar_empregada', 'TALIKNG TO EMPLYEE...', 5000, false, true, {
+    QBCore.Functions.Progressbar('falar_empregada', 'Оточняваш детайли за доставката', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function()
     TriggerEvent('animations:client:EmoteCommandStart', {"c"})
-    QBCore.Functions.Notify('You request a delivery! <br> Wait outside to employee prepare the delivery!', 'primary', 7500)
+    QBCore.Functions.Notify('Ти поиска пратка <br> Изчакай навънка за да ти я подготвият', 'primary', 7500)
     
     Wait(Config.DeliveryWait)
 
-    QBCore.Functions.Notify('The delivery request has been recived, now go at location in your map and give it to the customer', 'primary', 7500)
+    QBCore.Functions.Notify('Заявката за доставка е получена, сега отидете на място на gps-a и я дайте на клиента', 'primary', 7500)
     TriggerServerEvent('mt-delivery:server:AdicionarItem')
     ExportDeliveryTarget()
     end)
@@ -23,13 +23,13 @@ end)
 
 RegisterNetEvent('mt-delivery:client:BaterPorta', function()
     TriggerEvent('animations:client:EmoteCommandStart', {"knock"})
-    QBCore.Functions.Progressbar('falar_empregada', 'KNOCKING DOOR...', 5000, false, true, {
+    QBCore.Functions.Progressbar('falar_empregada', 'Чукаш...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function()
-    QBCore.Functions.Notify('You deliveryed a food box, now go at taco deleviry center and recive payment', 'primary', 7500)
+    QBCore.Functions.Notify('Ти достави пратката върни се до офиса и си вземи парите!', 'primary', 7500)
 
     TriggerServerEvent('mt-delivery:server:EntregarCaixa')
     end)
@@ -96,7 +96,7 @@ function ExportDeliveryTarget1()
             {
             event = "mt-delivery:client:BaterPorta",
             icon = "far fa-box",
-            label = "Knock Door",
+            label = "Почукай",
             item = "delivery_box",
             },
         },
@@ -114,7 +114,7 @@ function ExportDeliveryTarget2()
             {
             event = "mt-delivery:client:BaterPorta",
             icon = "far fa-box",
-            label = "Knock Door",
+            label = "Почукай",
             item = "delivery_box",
             },
         },
@@ -132,7 +132,7 @@ function ExportDeliveryTarget3()
             {
             event = "mt-delivery:client:BaterPorta",
             icon = "far fa-box",
-            label = "Knock Door",
+            label = "Почукай",
             item = "delivery_box",
             },
         },
@@ -150,7 +150,7 @@ function ExportDeliveryTarget4()
             {
             event = "mt-delivery:client:BaterPorta",
             icon = "far fa-box",
-            label = "Knock Door",
+            label = "Почукай",
             item = "delivery_box",
             },
         },
@@ -168,7 +168,7 @@ function ExportDeliveryTarget5()
             {
             event = "mt-delivery:client:BaterPorta",
             icon = "far fa-box",
-            label = "Knock Door",
+            label = "Почукай",
             item = "delivery_box",
             },
         },
@@ -186,7 +186,7 @@ function ExportDeliveryTarget6()
             {
             event = "mt-delivery:client:BaterPorta",
             icon = "far fa-box",
-            label = "Knock Door",
+            label = "Почукай",
             item = "delivery_box",
             },
         },
@@ -204,7 +204,7 @@ function ExportDeliveryTarget7()
             {
             event = "mt-delivery:client:BaterPorta",
             icon = "far fa-box",
-            label = "Knock Door",
+            label = "Почукай",
             item = "delivery_box",
             },
         },
@@ -222,7 +222,7 @@ function ExportDeliveryTarget8()
             {
             event = "mt-delivery:client:BaterPorta",
             icon = "far fa-box",
-            label = "Knock Door",
+            label = "Почукай",
             item = "delivery_box",
             },
         },
@@ -240,7 +240,7 @@ function ExportDeliveryTarget9()
             {
             event = "mt-delivery:client:BaterPorta",
             icon = "far fa-box",
-            label = "Knock Door",
+            label = "Почукай",
             item = "delivery_box",
             },
         },
@@ -258,7 +258,7 @@ function ExportDeliveryTarget10()
             {
             event = "mt-delivery:client:BaterPorta",
             icon = "far fa-box",
-            label = "Knock Door",
+            label = "Почукай",
             item = "delivery_box",
             },
         },
